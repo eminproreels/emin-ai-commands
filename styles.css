@@ -889,3 +889,529 @@ footer{
     padding-top:10px;
   }
 }
+/* ===== SEMANTIC CARD VISUALS ===== */
+
+.scene{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+}
+
+/* BILLBOARD */
+
+.visual-billboard{
+  background:linear-gradient(#d9d4ca 0 62%,#bdb7aa 62% 100%);
+}
+
+.billboard-scene{
+  background:
+    linear-gradient(180deg,#ded9cf 0 58%,#b9b3a7 58% 100%);
+}
+
+.billboard-box{
+  position:absolute;
+  width:62%;
+  height:36%;
+  left:18%;
+  top:28%;
+  background:#111;
+  border:5px solid #f7f4ec;
+  box-shadow:0 5px 0 rgba(0,0,0,.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.billboard-box span{
+  color:#ffe900;
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:-2px;
+}
+
+.billboard-pole{
+  position:absolute;
+  width:8px;
+  height:55%;
+  background:#111;
+  left:48%;
+  top:52%;
+}
+
+.billboard-ground{
+  position:absolute;
+  width:100%;
+  height:18%;
+  bottom:0;
+  background:#a9a396;
+}
+
+/* PORTRAIT */
+
+.visual-portrait{
+  background:linear-gradient(135deg,#e9e4da 0 55%,#c8c1b5 55%);
+}
+
+.portrait-head{
+  position:absolute;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:#111;
+  left:50%;
+  top:26%;
+  transform:translateX(-50%);
+}
+
+.portrait-body{
+  position:absolute;
+  width:82px;
+  height:58px;
+  border-radius:45px 45px 10px 10px;
+  background:#111;
+  left:50%;
+  bottom:14%;
+  transform:translateX(-50%);
+}
+
+.portrait-frame{
+  position:absolute;
+  inset:22% 18% 12%;
+  border:2px solid #ffe900;
+  border-radius:10px;
+}
+
+/* SPLASH */
+
+.visual-splash{
+  background:
+    radial-gradient(circle at 50% 50%,#2c2c2c 0,#111 72%);
+}
+
+.splash-product{
+  position:absolute;
+  width:44px;
+  height:82px;
+  border-radius:10px;
+  background:#ffe900;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-48%) rotate(-8deg);
+  box-shadow:0 12px 24px rgba(0,0,0,.35);
+}
+
+.drop{
+  position:absolute;
+  border-radius:50%;
+  background:#f8f4ea;
+}
+
+.d1{width:18px;height:18px;left:18%;top:30%}
+.d2{width:10px;height:10px;right:18%;top:25%}
+.d3{width:14px;height:14px;right:23%;bottom:18%}
+.d4{width:8px;height:8px;left:22%;bottom:25%}
+
+/* ANATOMY */
+
+.visual-anatomy{
+  background:#ece7dc;
+}
+
+.anatomy-core{
+  position:absolute;
+  width:48px;
+  height:74px;
+  border:3px solid #111;
+  border-radius:10px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background:#ffe900;
+}
+
+.part{
+  position:absolute;
+  background:#111;
+}
+
+.p1{width:26px;height:18px;left:17%;top:28%}
+.p2{width:24px;height:24px;right:16%;top:36%;border-radius:50%}
+.p3{width:30px;height:14px;right:20%;bottom:20%}
+
+.line{
+  position:absolute;
+  height:1px;
+  background:#111;
+  transform-origin:left center;
+}
+
+.l1{width:52px;left:32%;top:35%;transform:rotate(-12deg)}
+.l2{width:48px;left:56%;top:48%;transform:rotate(10deg)}
+.l3{width:48px;left:54%;top:64%;transform:rotate(18deg)}
+
+/* INFOGRAPHIC */
+
+.visual-infographic{
+  background:#f2eee5;
+}
+
+.info-scene .bar{
+  position:absolute;
+  bottom:20%;
+  width:12%;
+  background:#111;
+  border-radius:4px 4px 0 0;
+}
+
+.b1{left:18%;height:28%}
+.b2{left:34%;height:45%}
+.b3{left:50%;height:60%;background:#ffe900!important}
+.b4{left:66%;height:38%}
+
+.info-dot{
+  position:absolute;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:9px solid #ffe900;
+  right:10%;
+  top:16%;
+}
+
+/* CINEMATIC */
+
+.visual-cinematic{
+  background:#111;
+}
+
+.cinema-frame{
+  position:absolute;
+  inset:18%;
+  border:2px solid rgba(255,255,255,.7);
+}
+
+.cinema-light{
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:#ffe900;
+  filter:blur(18px);
+  opacity:.55;
+  right:-20px;
+  top:-20px;
+}
+
+.cinema-subject{
+  position:absolute;
+  width:46px;
+  height:74px;
+  background:#f0ece2;
+  left:50%;
+  bottom:14%;
+  transform:translateX(-50%);
+  border-radius:24px 24px 8px 8px;
+}
+
+/* PRODUCT */
+
+.visual-product{
+  background:linear-gradient(150deg,#171717 0 65%,#2b2b2b 65%);
+}
+
+.product-object{
+  position:absolute;
+  width:52px;
+  height:82px;
+  border-radius:10px;
+  background:#f2eee5;
+  left:50%;
+  top:48%;
+  transform:translate(-50%,-50%);
+  z-index:3;
+}
+
+.product-glow{
+  position:absolute;
+  width:92px;
+  height:92px;
+  border-radius:50%;
+  background:#ffe900;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  filter:blur(18px);
+  opacity:.42;
+}
+
+.product-shadow{
+  position:absolute;
+  width:90px;
+  height:18px;
+  border-radius:50%;
+  background:rgba(0,0,0,.5);
+  left:50%;
+  bottom:12%;
+  transform:translateX(-50%);
+}
+
+/* CRAFT */
+
+.visual-craft{
+  background:#e9e4da;
+}
+
+.cube{
+  position:absolute;
+  width:46px;
+  height:46px;
+  background:#ffe900;
+  border:2px solid #111;
+  transform:rotate(30deg) skew(-8deg);
+}
+
+.c1{left:18%;top:32%}
+.c2{left:42%;top:20%;background:#111}
+.c3{right:16%;bottom:18%;background:#fff}
+
+/* TECHNICAL */
+
+.visual-technical{
+  background:
+    linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),
+    #111;
+  background-size:18px 18px;
+}
+
+.tech-box{
+  position:absolute;
+  width:64px;
+  height:54px;
+  border:2px solid #ffe900;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.tech-line{
+  position:absolute;
+  height:1px;
+  background:#ffe900;
+}
+
+.t1{width:54px;left:15%;top:35%}
+.t2{width:46px;right:12%;top:50%}
+.t3{width:60px;left:22%;bottom:24%}
+
+.tech-dot{
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#fff;
+  right:18%;
+  top:18%;
+}
+
+/* CONTENT */
+
+.visual-content{
+  background:#ece7dc;
+}
+
+.content-card{
+  position:absolute;
+  width:58px;
+  height:78px;
+  border:2px solid #111;
+  background:#fff;
+  border-radius:8px;
+}
+
+.cc1{left:18%;top:24%;transform:rotate(-8deg)}
+.cc2{left:39%;top:18%;background:#ffe900}
+.cc3{right:15%;top:28%;transform:rotate(8deg)}
+
+/* COMPARE */
+
+.visual-compare{
+  background:#ece7dc;
+}
+
+.compare-left,
+.compare-right{
+  position:absolute;
+  top:18%;
+  width:38%;
+  height:64%;
+}
+
+.compare-left{
+  left:8%;
+  background:#111;
+}
+
+.compare-right{
+  right:8%;
+  background:#ffe900;
+}
+
+.compare-vs{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#fff;
+  border:2px solid #111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  z-index:4;
+}
+
+/* FANTASY */
+
+.visual-fantasy{
+  background:
+    radial-gradient(circle at 50% 50%,#242424 0,#111 70%);
+}
+
+.fantasy-orb{
+  position:absolute;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:#ffe900;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 34px rgba(255,233,0,.75);
+}
+
+.fantasy-ring{
+  position:absolute;
+  width:100px;
+  height:42px;
+  border:2px solid #fff;
+  border-radius:50%;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%) rotate(-20deg);
+}
+
+.fantasy-star{
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#fff;
+  right:20%;
+  top:20%;
+  box-shadow:-70px 42px 0 #fff,-35px 65px 0 #ffe900;
+}
+
+/* DEFAULT */
+
+.visual-default{
+  background:#111;
+}
+
+.default-scene .shape{
+  position:absolute;
+}
+
+.s1{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:#ffe900;
+  right:-10px;
+  top:18px;
+}
+
+.s2{
+  width:70px;
+  height:110px;
+  background:#ded8cd;
+  left:35%;
+  top:-10px;
+  transform:rotate(25deg);
+}
+
+.s3{
+  width:2px;
+  height:120px;
+  background:#fff;
+  left:55%;
+  top:5%;
+  transform:rotate(50deg);
+}
+
+/* MOBILE VISUAL SCALE */
+
+@media(max-width:560px){
+
+  .billboard-box{
+    border-width:3px;
+  }
+
+  .billboard-box span{
+    font-size:18px;
+  }
+
+  .portrait-head{
+    width:32px;
+    height:32px;
+  }
+
+  .portrait-body{
+    width:56px;
+    height:42px;
+  }
+
+  .splash-product{
+    width:30px;
+    height:58px;
+  }
+
+  .anatomy-core{
+    width:34px;
+    height:54px;
+  }
+
+  .info-dot{
+    width:26px;
+    height:26px;
+    border-width:6px;
+  }
+
+  .product-object{
+    width:36px;
+    height:58px;
+  }
+
+  .cube{
+    width:32px;
+    height:32px;
+  }
+
+  .content-card{
+    width:40px;
+    height:56px;
+  }
+
+  .fantasy-orb{
+    width:44px;
+    height:44px;
+  }
+
+  .fantasy-ring{
+    width:72px;
+    height:30px;
+  }
+}
