@@ -1415,3 +1415,112 @@ footer{
     height:30px;
   }
 }
+/* ===== ICON CARD SYSTEM ===== */
+
+.visual{
+  background:#eee9df !important;
+  position:relative;
+  overflow:hidden;
+}
+
+.icon-scene{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* жёлтый круг под иконкой */
+.icon-scene:before{
+  content:"";
+  position:absolute;
+  width:82px;
+  height:82px;
+  border-radius:50%;
+  background:var(--yellow);
+}
+
+/* сама иконка */
+.icon-scene svg{
+  position:relative;
+  z-index:2;
+  width:58px;
+  height:58px;
+  color:#111;
+  stroke-width:1.7;
+}
+
+/* немного разнообразия, чтобы карточки не выглядели копиями */
+
+.card:nth-child(4n+2) .visual{
+  background:#111 !important;
+}
+
+.card:nth-child(4n+2) .icon-scene svg{
+  color:#ffe900;
+}
+
+.card:nth-child(4n+2) .icon-scene:before{
+  background:#2a2a2a;
+  border:1px solid #ffe900;
+}
+
+.card:nth-child(4n+3) .visual{
+  background:#ffe900 !important;
+}
+
+.card:nth-child(4n+3) .icon-scene:before{
+  background:#f3f0e7;
+}
+
+.card:nth-child(4n+4) .visual{
+  background:#d9d3c7 !important;
+}
+
+.card:nth-child(4n+4) .icon-scene:before{
+  background:#111;
+}
+
+.card:nth-child(4n+4) .icon-scene svg{
+  color:#fff;
+}
+
+/* чип категории */
+
+.visual .v-chip{
+  z-index:5;
+  font-size:7px;
+  padding:4px 6px;
+  background:var(--yellow);
+}
+
+/* номер */
+
+.visual .v-num{
+  z-index:5;
+  font-size:7px;
+}
+
+/* на жёлтых карточках чип делаем белым */
+
+.card:nth-child(4n+3) .v-chip{
+  background:#fff;
+}
+
+/* MOBILE */
+
+@media(max-width:560px){
+
+  .icon-scene:before{
+    width:66px;
+    height:66px;
+  }
+
+  .icon-scene svg{
+    width:44px;
+    height:44px;
+    stroke-width:1.8;
+  }
+
+}
