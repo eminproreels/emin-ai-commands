@@ -680,3 +680,212 @@ footer{
     letter-spacing:-2px;
   }
 }
+/* ===== FINAL CLEANUP ===== */
+
+/* УБИРАЕМ "МОЯ БИБЛИОТЕКА" */
+.card .source-pill{
+  display:none !important;
+}
+
+/* ИНСТРУКЦИЯ БЕЗ ОГРОМНЫХ ПУСТОТ */
+.how{
+  padding:55px 0 55px;
+}
+
+.how h2{
+  margin:8px 0 30px;
+}
+
+.steps{
+  gap:16px;
+}
+
+.steps article{
+  padding-top:14px;
+}
+
+.steps h3{
+  margin:24px 0 8px;
+}
+
+.steps p{
+  margin:0;
+}
+
+/* КАРТОЧКИ ЧИЩЕ */
+.card{
+  box-shadow:none;
+}
+
+.visual{
+  border-color:rgba(0,0,0,.16);
+}
+
+.visual .v-chip{
+  font-size:7px;
+  padding:4px 7px;
+}
+
+.visual .v-num{
+  font-size:8px;
+}
+
+.visual .v-label{
+  opacity:.92;
+}
+
+/* более чистые превью */
+
+.v0{
+  background:
+    radial-gradient(circle at 72% 58%,#fff 0 17%,transparent 18%),
+    linear-gradient(135deg,#111 0 48%,#ffe900 48% 72%,#ded8cd 72%);
+}
+
+.v1{
+  background:
+    linear-gradient(145deg,#f1ede3 0 56%,#ffe900 56% 70%,#111 70%);
+}
+
+.v2{
+  background:
+    radial-gradient(circle at 68% 48%,#ffe900 0 18%,transparent 19%),
+    linear-gradient(130deg,#111 0 55%,#9b9891 55%);
+}
+
+.v3{
+  background:
+    linear-gradient(90deg,#111 0 32%,#ffe900 32% 35%,#ece7db 35% 68%,#111 68%);
+}
+
+.v4{
+  background:
+    radial-gradient(circle at 70% 50%,#fff 0 22%,#ffe900 23% 32%,transparent 33%),
+    #111;
+}
+
+.v5{
+  background:
+    linear-gradient(135deg,#111 0 45%,#ffe900 45% 67%,#e6e0d5 67%);
+}
+
+.v6{
+  background:
+    radial-gradient(circle at 78% 55%,#ffe900 0 34%,transparent 35%),
+    #111;
+}
+
+.v7{
+  background:
+    linear-gradient(160deg,#ece7dc 0 55%,#111 55%);
+}
+
+.v8{
+  background:
+    linear-gradient(140deg,#ffe900 0 48%,#111 48%);
+}
+
+.v9{
+  background:
+    radial-gradient(circle at 75% 50%,transparent 0 25%,#ffe900 26% 28%,transparent 29%),
+    #111;
+}
+
+.v10{
+  background:
+    linear-gradient(155deg,#ece7dc 0 50%,#ffe900 50% 63%,#111 63%);
+}
+
+.v11{
+  background:
+    linear-gradient(135deg,#111 0 55%,#ffe900 55% 58%,#ece7dc 58%);
+}
+
+/* MOBILE */
+
+@media(max-width:560px){
+
+  /* меньше воздуха после поиска */
+  .hero{
+    padding-bottom:30px;
+  }
+
+  /* компактная инструкция */
+  .how{
+    padding:30px 0 34px;
+  }
+
+  .how .eyebrow{
+    margin:0 0 10px;
+  }
+
+  .how h2{
+    font-size:44px;
+    line-height:.95;
+    letter-spacing:-2.5px;
+    margin:0 0 22px;
+  }
+
+  .steps{
+    gap:0;
+  }
+
+  .steps article{
+    padding:13px 0 16px;
+    border-top:2px solid #111;
+  }
+
+  .steps b{
+    display:block;
+    margin-bottom:12px;
+  }
+
+  .steps h3{
+    margin:0 0 7px;
+    font-size:20px;
+  }
+
+  .steps p{
+    margin:0;
+    font-size:14px;
+    line-height:1.4;
+  }
+
+  /* убираем пустоту между инструкцией и фильтрами */
+  .bar{
+    margin-top:0;
+    padding:20px 0;
+  }
+
+  /* карточки */
+  .card,
+  .card.featured{
+    min-height:132px;
+    grid-template-columns:104px 1fr;
+    column-gap:13px;
+    padding:9px;
+  }
+
+  .visual,
+  .card.featured .visual{
+    width:104px;
+    height:114px;
+  }
+
+  .cmd{
+    font-size:14px;
+    padding:6px 8px;
+  }
+
+  .card h3{
+    font-size:17px;
+    margin:10px 0 0;
+  }
+
+  /* после удаления "моя библиотека"
+     название красиво занимает свободное место */
+  .meta{
+    margin-top:auto;
+    padding-top:10px;
+  }
+}
