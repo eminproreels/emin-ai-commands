@@ -35,11 +35,11 @@ function rf(){
 }
 
 function render(){
-  let s=q.value.toLowerCase().trim();
+  const s=q.value.toLowerCase().trim();
 
-  let a=COMMANDS.filter(x=>
+  const a=COMMANDS.filter(x=>
     (active==="Все"||x.category===active)&&
-    (`${x.command} ${x.title} ${x.category}`).toLowerCase().includes(s)
+    (`${x.command} ${x.title} ${x.category} ${x.desc||""}`).toLowerCase().includes(s)
   );
 
   shown.textContent=`${a.length} из ${COMMANDS.length}`;
@@ -47,7 +47,6 @@ function render(){
 
   grid.innerHTML=a.map((x,idx)=>`
     <article class="card ${(idx===0&&active==="Все"&&!s)?"featured":""}" data-c="${esc(x.command)}">
-
       <div class="visual v${x.visual}">
         <span class="v-chip">${esc(x.category)}</span>
         <span class="v-num">${String(x.index).padStart(3,"0")}</span>
@@ -55,14 +54,13 @@ function render(){
       </div>
 
       <span class="cmd">${esc(x.command)}</span>
-
       <h3>${esc(x.title)}</h3>
+      <p class="desc">${esc(x.desc||"")}</p>
 
       <div class="meta">
         <span>${esc(x.category)}</span>
         <span>копировать ↗</span>
       </div>
-
     </article>
   `).join("");
 
@@ -83,11 +81,7 @@ function render(){
 
       toast.textContent=text+" скопирована";
       toast.classList.add("show");
-
-      setTimeout(
-        ()=>toast.classList.remove("show"),
-        1100
-      );
+      setTimeout(()=>toast.classList.remove("show"),1100);
     }
   );
 }
